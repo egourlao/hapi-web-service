@@ -1,0 +1,11 @@
+{
+  "name": "hapi-web-service",
+  "version": "0.0.1",
+  "description": "Components to build web services with hapi.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ericgourlaouen@airpost.net",
+  "license": "ISC"
+}
