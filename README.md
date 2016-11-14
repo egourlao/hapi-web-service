@@ -36,7 +36,7 @@ let getUsersNamesMethod = new hws.Method('getUsersNames',
     if (args.name) {
       callback(null, users.filter((user) => { return user.name.indexOf(args.name) !== -1 }).map((user) => { return user.name }))
     } else {
-      callback(null, users)
+      callback(null, users.map((user) => { return user.name }))
     }
   }
 )

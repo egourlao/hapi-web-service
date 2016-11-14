@@ -11,5 +11,9 @@
   "dependencies": {
     "boom": "^4.2.0",
     "joi": "^9.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dotpy3/hapi-web-service"
   }
 }
