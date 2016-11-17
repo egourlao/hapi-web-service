@@ -74,7 +74,7 @@ Creates an interface that will be accessible via `/[service]/[name]` where:
 - `input` - a [Joi](https://github.com/hapijs/joi) object representing an object, of which the keys are input elements.
 - `output` - a [Joi](https://github.com/hapijs/joi) object representing the output. This is added both for control and for description purposes.
 - `method` - a function with the following parameters: `function method(args, session, callback)` where:
-  - `args` - a JavaScript object with the different inputs
+  - `args` - a JavaScript object with the different inputs. It contains both the URI inputs (ex: `?name=John&age=18`), and the payload, for example in a `POST` request. The payload must be in a JSON format to be recognized. If an argument is present both in the URI and in the payload, the argument from the query is saved in the `args` object, and the payload argument is saved in the `args` object, but with a `_payload_` prefix to its key.
   - `session` - a JavaScript object representing the session contents
   - `callback` - a function with the following parameters: `function callback(err, data)` where:
     - `err` - an error. If `err` is a [Boom](https://github.com/hapijs/boom) error, it takes into account its properties.
